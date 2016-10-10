@@ -14,7 +14,7 @@ $baseurl: '{{ site.baseurl }}/images';
 	Spectral by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+	*/
 
 	@import 'libs/skel';
 
@@ -24,15 +24,15 @@ $baseurl: '{{ site.baseurl }}/images';
 		medium: '(max-width: 980px)',
 		small: '(max-width: 736px)',
 		xsmall: '(max-width: 480px)'
-	));
+		));
 
 	@include skel-layout((
 		reset: 'full',
 		boxModel: 'border',
 		grid: ( gutters: 1.5em )
-	));
+		));
 
-/* Basic */
+	/* Basic */
 
 	@-ms-viewport {
 		width: device-width;
@@ -209,7 +209,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		text-align: right;
 	}
 
-/* Section/Article */
+	/* Section/Article */
 
 	section, article {
 		&.special {
@@ -270,7 +270,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
-/* Form */
+	/* Form */
 
 	form {
 		margin: 0 0 _size(element-margin) 0;
@@ -436,7 +436,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		opacity: 1.0;
 	}
 
-/* Box */
+	/* Box */
 
 	.box {
 		border-radius: 3px;
@@ -457,7 +457,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
-/* Icon */
+	/* Icon */
 
 	.icon {
 		@include icon;
@@ -503,7 +503,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
-/* Image */
+	/* Image */
 
 	.image {
 		border-radius: 3px;
@@ -548,7 +548,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
-/* List */
+	/* List */
 
 	ol {
 		list-style: decimal;
@@ -724,7 +724,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		margin: 0 0 _size(element-margin) 0;
 	}
 
-/* Table */
+	/* Table */
 
 	.table-wrapper {
 		-webkit-overflow-scrolling: touch;
@@ -800,7 +800,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
-/* Button */
+	/* Button */
 
 	input[type="submit"],
 	input[type="reset"],
@@ -883,7 +883,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
-/* Features */
+	/* Features */
 
 	.features {
 		@include vendor('display', 'flex');
@@ -958,7 +958,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
-/* Spotlight */
+	/* Spotlight */
 
 	.spotlight {
 		@include vendor('align-items', 'center');
@@ -1030,7 +1030,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
-/* Wrapper */
+	/* Wrapper */
 
 	@mixin wrapper($p) {
 		background-color: _palette($p, bg);
@@ -1038,184 +1038,184 @@ $baseurl: '{{ site.baseurl }}/images';
 
 		// Basic
 
-			strong, b {
-				color: _palette($p, fg-bold);
-			}
+		strong, b {
+			color: _palette($p, fg-bold);
+		}
 
-			h2, h3, h4, h5, h6 {
-				color: _palette($p, fg-bold);
-			}
+		h2, h3, h4, h5, h6 {
+			color: _palette($p, fg-bold);
+		}
 
-			hr {
-				border-color: _palette($p, border);
-			}
+		hr {
+			border-color: _palette($p, border);
+		}
 
-			blockquote {
-				border-color: _palette($p, border);
-			}
+		blockquote {
+			border-color: _palette($p, border);
+		}
 
-			code {
-				background: _palette($p, border-bg);
-			}
+		code {
+			background: _palette($p, border-bg);
+		}
 
 		// Section/Article
 
-			header {
-				p {
-					color: _palette($p, fg-light);
+		header {
+			p {
+				color: _palette($p, fg-light);
+			}
+
+			&.major {
+				h2, h3, h4, h5, h6 {
+					border-color: _palette($p, border);
 				}
 
-				&.major {
-					h2, h3, h4, h5, h6 {
-						border-color: _palette($p, border);
-					}
-
-					p {
-						color: _palette($p, fg);
-					}
+				p {
+					color: _palette($p, fg);
 				}
 			}
+		}
 
 		// Form
 
-			label {
-				color: _palette($p, fg-bold);
-			}
+		label {
+			color: _palette($p, fg-bold);
+		}
 
-			input[type="text"],
-			input[type="password"],
-			input[type="email"],
-			select,
-			textarea {
-				background: _palette($p, border-bg);
-			}
+		input[type="text"],
+		input[type="password"],
+		input[type="email"],
+		select,
+		textarea {
+			background: _palette($p, border-bg);
+		}
 
-			.select-wrapper {
+		.select-wrapper {
+			&:before {
+				color: _palette($p, border);
+			}
+		}
+
+		input[type="checkbox"],
+		input[type="radio"], {
+			& + label {
+				color: _palette($p, fg);
+
 				&:before {
-					color: _palette($p, border);
+					background: _palette($p, border-bg);
 				}
 			}
 
-			input[type="checkbox"],
-			input[type="radio"], {
-				& + label {
-					color: _palette($p, fg);
-
-					&:before {
-						background: _palette($p, border-bg);
-					}
-				}
-
-				&:checked + label {
-					&:before {
-						background: _palette($p, fg-bold);
-						color: _palette($p, bg);
-					}
+			&:checked + label {
+				&:before {
+					background: _palette($p, fg-bold);
+					color: _palette($p, bg);
 				}
 			}
+		}
 
-			::-webkit-input-placeholder {
-				color: _palette($p, fg-light) !important;
-			}
+		::-webkit-input-placeholder {
+			color: _palette($p, fg-light) !important;
+		}
 
-			:-moz-placeholder {
-				color: _palette($p, fg-light) !important;
-			}
+		:-moz-placeholder {
+			color: _palette($p, fg-light) !important;
+		}
 
-			::-moz-placeholder {
-				color: _palette($p, fg-light) !important;
-			}
+		::-moz-placeholder {
+			color: _palette($p, fg-light) !important;
+		}
 
-			:-ms-input-placeholder {
-				color: _palette($p, fg-light) !important;
-			}
+		:-ms-input-placeholder {
+			color: _palette($p, fg-light) !important;
+		}
 
-			.formerize-placeholder {
-				color: _palette($p, fg-light) !important;
-			}
+		.formerize-placeholder {
+			color: _palette($p, fg-light) !important;
+		}
 
 		// Icon
 
-			.icon {
-				&.major {
-					border-color: _palette($p, border);
-				}
+		.icon {
+			&.major {
+				border-color: _palette($p, border);
 			}
+		}
 
 		// List
 
-			ul {
-				&.alt {
-					li {
-						border-color: _palette($p, border);
-					}
+		ul {
+			&.alt {
+				li {
+					border-color: _palette($p, border);
 				}
 			}
+		}
 
 		// Table
 
-			table {
-				tbody {
-					tr {
-						border-color: _palette($p, border);
+		table {
+			tbody {
+				tr {
+					border-color: _palette($p, border);
 
-						&:nth-child(2n + 1) {
-							background-color: _palette($p, border-bg);
-						}
+					&:nth-child(2n + 1) {
+						background-color: _palette($p, border-bg);
 					}
 				}
+			}
 
-				th {
-					color: _palette($p, fg-bold);
-				}
+			th {
+				color: _palette($p, fg-bold);
+			}
 
-				thead {
-					border-color: _palette($p, border);
-				}
+			thead {
+				border-color: _palette($p, border);
+			}
 
-				tfoot {
-					border-color: _palette($p, border);
-				}
+			tfoot {
+				border-color: _palette($p, border);
+			}
 
-				&.alt {
-					tbody {
-						tr {
-							td {
-								border-color: _palette($p, border);
-							}
+			&.alt {
+				tbody {
+					tr {
+						td {
+							border-color: _palette($p, border);
 						}
 					}
 				}
 			}
+		}
 
 		// Button
 
-			input[type="submit"],
-			input[type="reset"],
-			input[type="button"],
-			button,
-			.button {
-				box-shadow: inset 0 0 0 2px _palette($p, border);
-				color: _palette($p, fg-bold);
+		input[type="submit"],
+		input[type="reset"],
+		input[type="button"],
+		button,
+		.button {
+			box-shadow: inset 0 0 0 2px _palette($p, border);
+			color: _palette($p, fg-bold);
 
-				&:hover {
-					background-color: _palette($p, border-bg);
-				}
-
-				&:active {
-					background-color: _palette($p, border2-bg);
-				}
+			&:hover {
+				background-color: _palette($p, border-bg);
 			}
+
+			&:active {
+				background-color: _palette($p, border2-bg);
+			}
+		}
 
 		// Features
 
-			.features {
-				li {
-					@include breakpoint(small) {
-						border-top-color: _palette($p, border);
-					}
+		.features {
+			li {
+				@include breakpoint(small) {
+					border-top-color: _palette($p, border);
 				}
 			}
+		}
 
 	}
 
@@ -1268,7 +1268,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
-/* Page Wrapper + Menu */
+	/* Page Wrapper + Menu */
 
 	#page-wrapper {
 		@include vendor('transition', 'opacity #{_duration(menu)} ease');
@@ -1371,7 +1371,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
-/* Header */
+	/* Header */
 
 	#header {
 		@include vendor('transition', 'background-color #{_duration(transitions)} ease');
@@ -1476,7 +1476,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
-/* Banner */
+	/* Banner */
 
 	#banner {
 		@include vendor('display', 'flex');
@@ -1623,7 +1623,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
-/* CTA */
+	/* CTA */
 
 	#cta {
 		.inner {
@@ -1670,12 +1670,12 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
-/* Main */
+	/* Main */
 
 	#main {
 		> header {
 			@include padding(12em, 0);
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpg")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner2.png")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1729,7 +1729,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
-/* Footer */
+	/* Footer */
 
 	#footer {
 		@include padding(6em, 0);
@@ -1796,11 +1796,11 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
-/* Landing */
+	/* Landing */
 
 	body.landing {
 		#page-wrapper {
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpg")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner2.png")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1821,7 +1821,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 			#banner,
 			.wrapper.style4 {
-				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner.jpg")'));
+				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/banner2.png")'));
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
